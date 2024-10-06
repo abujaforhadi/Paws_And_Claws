@@ -7,7 +7,6 @@
     <title>Paws & Claws</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
@@ -36,7 +35,6 @@
                 <ul class="menu menu-horizontal px-1 ">
                     <li><a>Home</a></li>
                     <li><a>Shop</a></li>
-
                     <li><a>Contact</a></li>
                 </ul>
             </div>
@@ -49,51 +47,71 @@
                 </a>
             </div>
         </div>
-
     </header>
+
     <main>
         <section>
-            <div class="hero  py-3">
+            <div class="hero py-3">
                 <div class="hero-content text-center">
                     <div class="">
                         <p class="font-bold text-2xl py-6 text-[#13131399]">Bringing Families Together ❤️‍🔥</p>
-                        <h1 class="text-4xl md:text-6xl font-bold md:font-black">
-                            Your Path to Adoption <br>Starts Here</h1>
-                        <p class="py-6">
-                            It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
-                        </p>
+                        <h1 class="text-4xl md:text-6xl font-bold md:font-black">Your Path to Adoption <br>Starts Here
+                        </h1>
+                        <p class="py-6">It is a long established fact that a reader will be distracted by the readable
+                            content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it
+                            has a.</p>
                         <button class="btn btn-primary bg-[#0E7A81] px-8 py-2 text-white">View More</button>
-
                         <img src="asset/images/pet.webp" alt="" srcset="">
                     </div>
                 </div>
             </div>
             <div class="text-center">
                 <h2 class="font-black text-4xl">Adopt Your Best Friend</h2>
-                <p class="text-[#131313B3] py-3">It is a long established fact that a reader will be distracted by the readable content of a <br>
-                    page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
-                <div id="categories">
-
-
-                </div>
-                
+                <p class="text-[#131313B3] py-3">It is a long established fact that a reader will be distracted by the
+                    readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that
+                    it has a.</p>
+                <div id="categories"></div>
             </div>
         </section>
-        <SEction>
-            <div id="pet">
-                <div class="carD">
-                    
-                  </div>
+
+        <section >
+           <div class="flex justify-between">
+            <h2>Suggested for you</h2>
+            <button id="sort" class="btn bg-[#0E7A81] text-white">Sort by price</button>
+           </div>
+            <div class="flex gap-4">
+                <div id="pet" class="w-3/4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+            <div id="likeImage" class="w-1/4 grid grid-cols-2 gap-2 max-h-80 "></div>
             </div>
+            <!-- max height and scroll added -->
+        </section>
 
-        </SEction>
 
+        <section>
+            <!-- Trigger button to open the modal -->
+
+            <!-- Modal structure -->
+            <dialog id="petDetailsModal" class="modal modal-bottom sm:modal-middle">
+
+            </dialog>
+            <!-- Modal Structure for Adoption -->
+            <dialog id="adoptModal" class="modal">
+                <div class="modal-box">
+                    <h2 class="text-lg font-bold">Congratulations!</h2>
+                    <p class="mt-4">You have successfully adopted a pet!</p>
+                    <p id="countdown" class="mt-2 font-bold text-[#0E7A81] text-xl"></p>
+                    <div class="modal-action">
+                        <button class="btn w-full font-bold text-lg text-[#0E7A81] bg-[#0E7A811A]"
+                            id="closeAdoptModal">Close</button>
+                    </div>
+                </div>
+            </dialog>
+
+
+        </section>
     </main>
-    <footer>
 
-    </footer>
-
+    <footer></footer>
 
     <script src="asset/js/index.js"></script>
 </body>

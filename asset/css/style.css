@@ -4,3 +4,9 @@
 .font-lato {
     font-family: 'Lato', sans-serif;
 }
+.active-category {
+    background-color: #0E7A81;
+    color: white; /* Optional: Set the text color to white for better visibility */
+    border: 1px solid #0E7A81; /* Optional: You can also change the border color */
+  }
+  
