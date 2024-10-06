@@ -76,10 +76,12 @@ function displayPet(pets) {
   petContainer.innerHTML = "";
 
   if (!pets || pets.length === 0) {
+    petContainer.classList.remove("grid", "grid-cols-1", "gap-4", "md:grid-cols-2", "lg:grid-cols-3");
+
     petContainer.innerHTML = `
     <div class="card w-full">
       <figure class="px-10 pt-10">
-        <img src="asset/images/error.webp" alt="error" class="w-full" />
+        <img src="asset/images/error.webp" alt="error" class="" />
       </figure>
       <div class="card-body items-center text-center">
         <h2 class="card-title">No Information Available</h2>
@@ -90,8 +92,13 @@ function displayPet(pets) {
     `;
     return;
   }
+  else{
+    petContainer.classList.add("grid", "grid-cols-1", "gap-4", "md:grid-cols-2", "lg:grid-cols-3");
+
+  }
 
   pets.forEach((item) => {
+
     const petElement = document.createElement("div");
     petElement.classList.add("card", "shadow-xl");
 
@@ -145,7 +152,7 @@ function displayPet(pets) {
       likedImage.src = petImage;
       likedImage.alt = petName;
 
-      likedImage.classList.add("w-full", "rounded-lg");
+      likedImage.classList.add( "rounded-lg");
 
       likeContainer.appendChild(likedImage);
     });
