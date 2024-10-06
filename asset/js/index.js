@@ -5,6 +5,16 @@ const categories = async () => {
   const data = await response.json();
   get_Categories(data.categories);
 };
+const petData = async () => {
+  const response = await fetch(
+    "https://openapi.programming-hero.com/api/peddy/pets"
+  );
+  const data = await response.json();
+  get_pets(data.pets);
+};
+const get_pets = (data) => {  
+  displayPet(data);
+}
 
 const get_Categories = (data) => {
   const categories = document.getElementById("categories");
@@ -241,3 +251,4 @@ sortButton.addEventListener("click", () => {
 });
 
 categories();
+petData();

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
-<body class="font-lato mx-3 my-6 md:mx-36 text-[#131313]">
-    <header>
+<body class="font-lato  text-[#131313]">
+    <header class="mx-3 my-6 md:mx-36">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -49,7 +49,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="mx-3 my-6 md:mx-36">
         <section>
             <div class="hero py-3">
                 <div class="hero-content text-center">
@@ -60,7 +60,8 @@
                         <p class="py-6">It is a long established fact that a reader will be distracted by the readable
                             content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it
                             has a.</p>
-                        <button class="btn btn-primary bg-[#0E7A81] px-8 py-2 text-white">View More</button>
+                        <button class="btn btn-primary bg-[#0E7A81] px-8 py-2 text-white"><a href="#petId">View
+                                More</a></button>
                         <img src="asset/images/pet.webp" alt="" srcset="">
                     </div>
                 </div>
@@ -74,23 +75,20 @@
             </div>
         </section>
 
-        <section >
-           <div class="flex justify-between">
-            <h2>Suggested for you</h2>
-            <button id="sort" class="btn bg-[#0E7A81] text-white">Sort by price</button>
-           </div>
+        <section id="petId">
+            <div class="flex justify-between py-4">
+                <h2>Suggested for you</h2>
+                <button id="sort" class="btn bg-[#0E7A81] text-white">Sort by price</button>
+            </div>
             <div class="flex gap-4">
                 <div id="pet" class="w-3/4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
-            <div id="likeImage" class="w-1/4 grid grid-cols-2 gap-2 max-h-80 "></div>
+                <div id="likeImage" class="w-1/4 grid grid-cols-2 gap-2 max-h-80 "></div>
             </div>
-            <!-- max height and scroll added -->
         </section>
 
 
         <section>
-            <!-- Trigger button to open the modal -->
 
-            <!-- Modal structure -->
             <dialog id="petDetailsModal" class="modal modal-bottom sm:modal-middle">
 
             </dialog>
@@ -111,7 +109,57 @@
         </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer bg-[#131313] text-white p-10">
+        <aside>
+
+            <p class="flex gap-1 text-3xl  font-bold"><img src="asset/images/logo.webp" alt="" srcset="">
+                Paws & Claws
+
+            </p>
+            <p>Location: Dhaka <br>
+                Phone: +8801767***** <br>
+                Email: abujaforhadi@gmail.com <br>
+                Openings hours: 9.00 AM - 5.00 PM</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a href="index.html" class="link link-hover">Home</a>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <div class="flex gap-2">
+                <!-- GitHub Icon -->
+                <a href="https://github.com/abujaforhadi" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.305 3.438 9.8 8.207 11.387.6.111.793-.26.793-.578 0-.285-.01-1.042-.015-2.046-3.338.723-4.043-1.606-4.043-1.606-.546-1.385-1.333-1.754-1.333-1.754-1.086-.743.083-.728.083-.728 1.204.084 1.835 1.236 1.835 1.236 1.068 1.827 2.804 1.298 3.49.992.108-.775.419-1.298.762-1.598-2.665-.304-5.467-1.335-5.467-5.93 0-1.313.47-2.384 1.236-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.303 1.227.958-.266 1.986-.398 3.006-.404 1.02.006 2.048.138 3.007.404 2.295-1.549 3.303-1.227 3.303-1.227.653 1.652.242 2.873.118 3.176.766.836 1.236 1.907 1.236 3.22 0 4.606-2.805 5.623-5.475 5.922.43.37.815 1.096.815 2.206 0 1.592-.014 2.872-.014 3.261 0 .319.191.694.799.578C20.563 22.299 24 17.804 24 12.5c0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                </a>
+            
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/abujaforhadi" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                    </svg>
+                </a>
+            </div>
+            
+            
+
+
+        </nav>
+
+        <form>
+            <h6 class="footer-title">Newsletter</h6>
+            <fieldset class="form-control w-80">
+                <label class="label">
+                    
+                </label>
+                <div class="join">
+                    <input type="text" placeholder="Enter your mail" class="input input-bordered join-item" />
+                    <button class="btn btn-primary join-item">Subscribe</button>
+                </div>
+            </fieldset>
+        </form>
+    </footer>
 
     <script src="asset/js/index.js"></script>
 </body>
