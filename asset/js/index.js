@@ -53,7 +53,7 @@ const get_Categories = (data) => {
         .then((SelectiveData) => {
           setTimeout(() => {
             loadingElement.style.display = "none";
-            const petContainer = document.getElementById("pet");
+            
 
             displayPet(SelectiveData.data || []); 
           }, 5000);
