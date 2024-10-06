@@ -15,9 +15,9 @@ const petData = async () => {
 const get_pets = (data) => {  
   displayPet(data);
 }
-
 const get_Categories = (data) => {
   const categories = document.getElementById("categories");
+  const loadingElement = document.getElementById("loading");
   
   let activeButton = null;
 
@@ -35,31 +35,42 @@ const get_Categories = (data) => {
     categories.appendChild(categoryElement);
 
     categoryElement.addEventListener("click", () => {
-      
+      // Show the loading spinner when a category is clicked
+      loadingElement.style.display = "block";
+
       if (activeButton) {
         activeButton.style.backgroundColor = "";  
         activeButton.style.color = "";  
       }
-      
+
       categoryElement.style.backgroundColor = "#0E7A81";
       categoryElement.style.color = "white"; 
-
       activeButton = categoryElement;
 
+      // Fetch the category data
       fetch(
         `https://openapi.programming-hero.com/api/peddy/category/${category.category}`
       )
         .then((response) => response.json())
         .then((SelectiveData) => {
-          console.log("Selective Data:", SelectiveData);
-          displayPet(SelectiveData.data || []);
+          // Set a timeout to ensure 5 seconds delay before displaying the data
+          setTimeout(() => {
+            // Hide the loading spinner after 5 seconds
+            loadingElement.style.display = "none";
+            
+            // Call displayPet() after 5 seconds
+            displayPet(SelectiveData.data || []);
+          }, 5000); // 5000 milliseconds = 5 seconds
         })
         .catch((error) => {
           console.error("Error fetching category data:", error);
+          loadingElement.style.display = "none"; // Hide spinner even on error
         });
     });
   });
 };
+
+
 
 let petsData = []; 
 
